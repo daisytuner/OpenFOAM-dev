@@ -12,7 +12,7 @@ ls -d processor* | xargs -I {} rm -rf ./{}/0
 ls -d processor* | xargs -I {} mv ./{}/500 ./{}/0
 ls -d processor* | xargs -I {} rm -rf ./{}/0/uniform
 
-runParallel foamRun
+runApplication foamRun
 
 runApplication reconstructPar
 
