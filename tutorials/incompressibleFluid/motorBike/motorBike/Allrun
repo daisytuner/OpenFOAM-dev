@@ -9,14 +9,14 @@ cp $FOAM_TUTORIALS/resources/geometry/motorBike.obj.gz constant/geometry/
 
 runApplication blockMesh
 runApplication decomposePar -copyZero
-runParallel snappyHexMesh -overwrite
+runApplication snappyHexMesh -overwrite
 
 find . -type f -iname "*level*" -exec rm {} \;
 
-runParallel renumberMesh -overwrite
+runApplication renumberMesh -overwrite
 
-runParallel potentialFoam -initialiseUBCs
+runApplication potentialFoam -initialiseUBCs
 
-runParallel foamRun
+runApplication foamRun
 
 #------------------------------------------------------------------------------

@@ -9,6 +9,7 @@ FoamFile
 {
     format      ascii;
     class       dictionary;
+    location    "system";
     object      controlDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -31,7 +32,7 @@ writeInterval   100;
 
 purgeWrite      0;
 
-writeFormat     binary;
+writeFormat     ascii;
 
 writePrecision  6;
 
