@@ -44,5 +44,4 @@
 
     
     export PATH=$PATH:$WM_PROJECT_DIR/wmake
-    export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/lib:/usr/local/lib64:/usr/local/papi/lib:/usr/local/cuda-12.8/lib64:$WM_PROJECT_DIR/platforms/linux64GccSPInt32Opt/lib:$WM_PROJECT_DIR/platforms/linux64GccSPInt32Opt/lib/dummy
-    export LIBRARY_PATH=/usr/local/lib
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WM_PROJECT_DIR/platforms/linux64GccSPInt32Opt/lib:$WM_PROJECT_DIR/platforms/linux64GccSPInt32Opt/lib/dummy
