@@ -11,11 +11,11 @@ runApplication surfaceFeatures
 runApplication blockMesh
 
 runApplication decomposePar -copyZero
-runParallel snappyHexMesh -overwrite
+runApplication snappyHexMesh -overwrite
 
-runParallel patchSummary
-runParallel potentialFoam
-runParallel foamRun
+runApplication patchSummary
+runApplication potentialFoam
+runApplication foamRun
 
 runApplication reconstructPar -latestTime
 
