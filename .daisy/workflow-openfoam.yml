@@ -75,6 +75,5 @@ steps:
         METIS_TYPE: none
         PARMETIS_TYPE: none
         ZOLTAN_TYPE: none #ThirdParty
-        PATH: $PATH:/workspace/wmake
-        LD_LIBRARY_PATH: $LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu:/usr/local/lib:/usr/local/lib64:/usr/local/papi/lib:/usr/local/cuda-12.8/lib64:/workspace/platforms/linux64GccDPInt32Opt/lib:/workspace/platforms/linux64GccDPInt32Opt/lib/openmpi-system
-  
+        LD_LIBRARY_PATH: $WM_PROJECT_DIR/platforms/linux64GccSPInt32Opt/lib:$WM_PROJECT_DIR/platforms/linux64GccSPInt32Opt/lib/dummy:$LD_LIBRARY_PATH
+        LIBRARY_PATH: $LD_LIBRARY_PATH:/usr/local/lib
