@@ -18,17 +18,17 @@ steps:
     . etc/custom_bashrc 
     ./wmake/wmakeLnIncludeAll
 
-    ./Allwmake -j128
+    ./Allwmake -j128 >>/dev/null 2>&1
 
     cd ${WM_PROJECT_DIR}/tutorials/incompressibleFluid/propeller
     cp ${FOAM_TUTORIALS}/resources/geometry/propeller*.obj.gz constant/geometry/
     ${FOAM_APPBIN}/blockMesh
     ${FOAM_APPBIN}/surfaceFeatures
-    ${FOAM_APPBIN}/snappyHexMesh -overwrite
-    ${FOAM_APPBIN}/createBaffles -overwrite
-    ${FOAM_APPBIN}/splitBaffles -overwrite
-    ${FOAM_APPBIN}/renumberMesh -noFields -overwrite
-    ${FOAM_APPBIN}/createNonConformalCouples -overwrite nonCouple1 nonCouple2
+    ${FOAM_APPBIN}/snappyHexMesh -overwrite >>/dev/null 2>&1
+    ${FOAM_APPBIN}/createBaffles -overwrite >>/dev/null 2>&1
+    ${FOAM_APPBIN}/splitBaffles -overwrite >>/dev/null 2>&1
+    ${FOAM_APPBIN}/renumberMesh -noFields -overwrite >>/dev/null 2>&1
+    ${FOAM_APPBIN}/createNonConformalCouples -overwrite nonCouple1 nonCouple2 >>/dev/null 2>&1
     cd ${WM_PROJECT_DIR}
 
   run:
